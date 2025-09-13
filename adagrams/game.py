@@ -110,6 +110,6 @@ def get_highest_word_score(word_list):
                 if len(best_word) != 10 and len(current_word) < len(best_word):
                     best_word = current_word
 
-    highest_word_score = (best_word, score)
+    highest_score = (best_word, score)
 
-    return highest_word_score
+    return highest_score
