@@ -65,7 +65,21 @@ def uses_available_letters(word, letter_bank):
     else:
         return False
 
-
+# rethinking on 9/19/2025 of the function uses_available_letters:
+# changes and reason :
+# I was building a separate filtered list. But I removed it bc the loop already checks if each letter is available in the letter bank, so if the loop finishes, we know the word can be formed.
+# updated function :
+# def uses_available_letters(word, letter_bank): 
+#     letter_bank_count = {} 
+#     for letter in letter_bank: 
+#         letter_bank_count[letter] = letter_bank_count.get(letter, 0) + 1 
+        
+#     for letter in word.upper(): 
+#         if letter_bank_count.get(letter, 0) == 0: 
+#             return False 
+#         letter_bank_count[letter] -= 1 
+        
+#     return True
 
     
 
